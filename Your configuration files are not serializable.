@@ -1,0 +1,18 @@
+  Your configuration files are not serializable.
+
+  at C:\xampp\htdocs\vendor\laravel\framework\src\Illuminate\Foundation\Console\ConfigCacheCommand.php:71
+     67▕             require $configPath;
+     68▕         } catch (Throwable $e) {
+     69▕             $this->files->delete($configPath);
+     70▕
+  ➜  71▕             throw new LogicException('Your configuration files are not serializable.', 0, $e);
+     72▕         }
+     73▕
+     74▕         $this->info('Configuration cached successfully!');
+     75▕     }
+
+  1   C:\xampp\htdocs\bootstrap\cache\config.php:1145
+      Error::("Call to undefined method Opis\Closure\SerializableClosure::__set_state()")
+
+  2   C:\xampp\htdocs\vendor\laravel\framework\src\Illuminate\Foundation\Console\ConfigCacheCommand.php:67
+      require()
